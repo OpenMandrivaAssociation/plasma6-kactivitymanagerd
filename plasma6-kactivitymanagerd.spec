@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %define git 20230520
 
-Name: kactivitymanagerd
+Name: plasma6-kactivitymanagerd
 Version:	5.240.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
@@ -34,7 +34,6 @@ BuildRequires: cmake(KF6WindowSystem)
 BuildRequires: cmake(KF6GlobalAccel)
 BuildRequires: cmake(KF6XmlGui)
 BuildRequires: boost-devel
-Requires: kactivities >= 5.20.0
 
 %description
 KDE Plasma 6 Activities.
