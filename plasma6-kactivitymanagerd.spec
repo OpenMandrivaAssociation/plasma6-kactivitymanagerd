@@ -55,8 +55,8 @@ KDE Plasma 6 Activities.
 %find_lang kactivities5 || touch kactivities5.lang
 
 %files -f kactivities5.lang
-%{_datadir}/qlogging-categories6/%{name}.categories
-%{_libdir}/lib%{name}_plugin.so
+%{_datadir}/qlogging-categories6/kactivitymanagerd.categories
+%{_libdir}/libkactivitymanagerd_plugin.so
 %{_libdir}/libexec/kactivitymanagerd
 %{_prefix}/lib/systemd/user/plasma-kactivitymanagerd.service
 %{_datadir}/dbus-1/services/org.kde.ActivityManager.service
