@@ -34,6 +34,8 @@ BuildRequires: cmake(KF6WindowSystem)
 BuildRequires: cmake(KF6GlobalAccel)
 BuildRequires: cmake(KF6XmlGui)
 BuildRequires: boost-devel
+# Not plasma5
+BuildRequires: plasma6-xdg-desktop-portal-kde
 
 %description
 KDE Plasma 6 Activities.
