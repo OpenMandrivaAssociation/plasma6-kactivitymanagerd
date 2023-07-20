@@ -3,7 +3,7 @@
 
 Name: plasma6-kactivitymanagerd
 Version:	5.240.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/kactivitymanagerd/-/archive/master/kactivitymanagerd-master.tar.bz2#/kactivitymanagerd-%{git}.tar.bz2
 %else
@@ -36,6 +36,7 @@ BuildRequires: cmake(KF6XmlGui)
 BuildRequires: boost-devel
 # Not plasma5
 BuildRequires: plasma6-xdg-desktop-portal-kde
+Requires: qt6-qtbase-sql-sqlite
 
 %description
 KDE Plasma 6 Activities.
