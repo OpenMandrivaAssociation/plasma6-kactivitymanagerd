@@ -1,9 +1,9 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230715
+%define git 20230722
 
 Name: plasma6-kactivitymanagerd
 Version:	5.240.0
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/kactivitymanagerd/-/archive/master/kactivitymanagerd-master.tar.bz2#/kactivitymanagerd-%{git}.tar.bz2
 %else
@@ -55,9 +55,9 @@ KDE Plasma 6 Activities.
 %install
 %ninja_install -C build
 
-%find_lang kactivities5 || touch kactivities5.lang
+%find_lang kactivities6 || touch kactivities6.lang
 
-%files -f kactivities5.lang
+%files -f kactivities6.lang
 %{_datadir}/qlogging-categories6/kactivitymanagerd.categories
 %{_libdir}/libkactivitymanagerd_plugin.so
 %{_libdir}/libexec/kactivitymanagerd
